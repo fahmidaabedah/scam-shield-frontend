@@ -80,7 +80,9 @@ function render(data) {
   const isScam = data.verdict === "SCAM";
   verdictBadge.textContent = isScam ? t.scam : t.safe;
   verdictBadge.className = `verdict-badge ${isScam ? "scam" : "safe"}`;
-  scoreEl.textContent = `${t.score}: ${Math.round(data.scam_score * 100)}%`;
+  scoreEl.textContent = isScam
+    ? `${t.score}: ${Math.round(data.scam_score * 100)}%`
+    : `${t.safeConfidence}: ${Math.round(data.probability * 100)}%`;
 
   const typeLabel = TYPE_LABELS[lang][data.type] || data.type;
   typeRow.innerHTML = isScam
