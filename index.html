@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scam Shield</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <nav class="topbar">
+      <div class="brand">
+        <svg class="brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L4 5V11C4 16.5 7.4 21.3 12 22.5C16.6 21.3 20 16.5 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9 12.2L11.1 14.3L15.3 9.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">Scam Shield</span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="bn">বাংলা</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="badge" data-i18n="badge"></div>
+      <h1 data-i18n="title"></h1>
+      <p data-i18n="subtitle"></p>
+    </header>
+
+    <main class="card">
+      <label for="msg" class="label" data-i18n="label"></label>
+      <textarea id="msg" rows="5"></textarea>
+
+      <div class="examples">
+        <span data-i18n="examplesLabel"></span>
+        <button class="chip" data-ex="bkash" data-i18n="chipBkash"></button>
+        <button class="chip" data-ex="legit" data-i18n="chipLegit"></button>
+        <button class="chip" data-ex="prize" data-i18n="chipPrize"></button>
+      </div>
+
+      <button id="check" class="primary" data-i18n="check"></button>
+
+      <div id="result" class="result hidden">
+        <div class="verdict-row">
+          <span id="verdict-badge" class="verdict-badge"></span>
+          <span id="score" class="score"></span>
+        </div>
+        <div id="type-row" class="type-row"></div>
+        <div id="why-row" class="why-row"></div>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+    </main>
+
+    <section class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div>
+          <div class="step-h" data-i18n="step1h"></div>
+          <div class="step-b" data-i18n="step1b"></div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div>
+          <div class="step-h" data-i18n="step2h"></div>
+          <div class="step-b" data-i18n="step2b"></div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div>
+          <div class="step-h" data-i18n="step3h"></div>
+          <div class="step-b" data-i18n="step3b"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p data-i18n="footer"></p>
+    </footer>
+  </div>
+
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
